@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(ActividadGrupal4PEL
         main.cpp
-        ListaEnlazada.h)
+        ListaEnlazada.h
+        Contacto.h
+        PerfilUsuario.h)

@@ -19,9 +19,9 @@ template <typename T>
 class ListaEnlazada {
 private:
     Node<T>* head;
-    int size;
+    int tamaño;
 public:
-    ListaEnlazada() : head(nullptr), size(0) {}
+    ListaEnlazada() : head(nullptr), tamaño(0) {}
     //Destructor para limpiar memoria
     ~ListaEnlazada() {
         limpiar();
@@ -34,7 +34,7 @@ public:
             current = nextNode;
         }
         head = nullptr;
-        size = 0;
+        tamaño = 0;
     }
     //Insertar al final
     void push_back(T value) {
@@ -48,7 +48,7 @@ public:
             }
             temp->next = newNode;
         }
-        size++;
+        tamaño++;
     }
     //Eliminar por valor (requiere que T tenga operador ==)
     bool remove(T value) {
@@ -58,7 +58,7 @@ public:
             Node<T>* toDelete  = head;
             head = head->next;
             delete toDelete;
-            size--;
+            tamaño--;
             return true;
         }
         Node<T>* current = head;
@@ -69,7 +69,7 @@ public:
             Node<T>* toDelete = current->next;
             current->next = toDelete->next;
             delete toDelete;
-            size--;
+            tamaño--;
             return true;
         }
         return false;
@@ -84,7 +84,7 @@ public:
         return false;
     }
     //Obtener tamaño
-    int getSize() const { return size;}
+    int getSize() const { return tamaño;}
     //Obetener nodo cabeza (para iterar externamente si es necesario
     Node<T>* getHead() const { return head;}
 };
