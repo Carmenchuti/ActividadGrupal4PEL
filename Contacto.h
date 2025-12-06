@@ -14,7 +14,7 @@ private:
     int edad;
 public:
     Contacto() { }//Constructor por defecto
-    Contacto(std::string n, std:.string t, int e) : nombre(n), telefono(t), edad(e) {}
+    Contacto(std::string n, std::string t, int e) : nombre(n), telefono(t), edad(e) {}
     //Getters
     std::string getNombre() const { return nombre;}
     std::string getTelefono() const { return telefono;}
@@ -33,7 +33,7 @@ public:
 
     //Metodo para imprimir info
     void imprimirInfo() const {
-        std::cout << " - " << nombre << " (" << edad << " años) | Tlf: " << telefono << std:.endl;
+        std::cout << " - " << nombre << " (" << edad << " años) | Tlf: " << telefono << std::endl;
     }
 };
 
