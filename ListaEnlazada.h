@@ -42,7 +42,7 @@ public:
         if (!head) {
             head = newNode;
         }else {
-            Node<T>* current = head;
+            Node<T>* temp = head;
             while (temp->next) {
                 temp = temp->next;
             }

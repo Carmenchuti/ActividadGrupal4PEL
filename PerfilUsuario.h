@@ -45,7 +45,7 @@ public:
             std::cout << "(Lista vacía)" << std::endl;
         }
         while (actual) {
-            actual->dato.imprimirInfo();
+            actual->data.imprimirInfo();
             actual = actual->next;
         }
     }
